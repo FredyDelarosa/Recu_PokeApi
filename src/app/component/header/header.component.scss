@@ -1,0 +1,26 @@
+header {
+  background-color: #7DBF3C; /* Verde primario */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Asegura que los elementos estén separados */
+  padding: 0 16px; /* Añade un poco de espacio a los lados */
+  border-bottom: 4px solid #D62828; /* Línea de acento rojo */
+}
+
+h1 {
+  color: #F2D94E; /* Amarillo secundario */
+  -webkit-text-stroke: 2px #145214; /* Contorno verde oscuro */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer; /* Indica que el título es interactivo */
+}
+
+.pokedex-container {
+  display: flex;
+  align-items: center;
+}
+
+.pokedex-image {
+  width: 50px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  cursor: pointer; /* Hace que la imagen sea clicable */
+}

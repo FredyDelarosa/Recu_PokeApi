@@ -1,0 +1,43 @@
+<div *ngIf="pokemonDetail">
+  <!-- Nombre del Pokémon -->
+  <h1>{{ pokemonDetail.name | uppercase | remplace }}</h1>
+
+  <!-- Pestañas -->
+  <mat-tab-group>
+    <!-- Pestaña: Detalles Generales -->
+
+
+    <!-- Pestaña: Habilidades -->
+    <mat-tab label="Habilidades">
+      <div>
+        <h2>Habilidades</h2>
+        <ul>
+          <li *ngFor="let ability of pokemonDetail.abilities">
+            {{ ability.ability.name }}
+          </li>
+        </ul>
+      </div>
+    </mat-tab>
+
+    <!-- Pestaña: Imágenes -->
+    <mat-tab label="Imágenes">
+      <div>
+        <h2>Imágenes</h2>
+        <img *ngIf="pokemonDetail.sprites?.front_default" [src]="pokemonDetail.sprites.front_default" alt="{{ pokemonDetail.name }} front" />
+        <img *ngIf="pokemonDetail.sprites?.back_default" [src]="pokemonDetail.sprites.back_default" alt="{{ pokemonDetail.name }} back" />
+      </div>
+    </mat-tab>
+
+    <!-- Pestaña: Juegos -->
+    <mat-tab label="Juegos">
+      <div>
+        <h2>Juegos en los que aparece</h2>
+        <ul>
+          <li *ngFor="let game of pokemonDetail.game_indices">
+            {{ game.version.name | firsUpper }}
+          </li>
+        </ul>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

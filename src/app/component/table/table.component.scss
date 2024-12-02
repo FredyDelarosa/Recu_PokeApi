@@ -1,0 +1,16 @@
+.favorite-icon {
+  cursor: pointer;
+  color: gray;
+
+  &.favorite-icon {
+    color: red;
+  }
+}
+
+th {
+  background-color: rgb(18, 89, 255);
+}
+
+.pokemon-url {
+  color: blue;
+}
